@@ -1,0 +1,202 @@
+[
+    {
+        
+        "name": "Vintage Wall Clock",
+        "description": "Classic vintage wall clock with Roman numerals.",
+        "price": 45.99,
+        "category": "Wall Decor",
+        "imageUrl": "https://i.ibb.co/nmPk3cr/1.jpg"
+    },
+    {
+        
+        "name": "Abstract Canvas Painting",
+        "description": "Colorful abstract canvas painting for modern interiors.",
+        "price": 120.00,
+        "category": "Wall Art",
+        "imageUrl": "https://i.ibb.co/7CcwBVG/2.webp"
+    },
+    {
+        
+        "name": "Ceramic Vase",
+        "description": "Handcrafted ceramic vase with a smooth finish.",
+        "price": 35.50,
+        "category": "Vases",
+        "imageUrl": "https://i.ibb.co/4mm7Bf6/3.jpg"
+    },
+    {
+        
+        "name": "Decorative Throw Pillow",
+        "description": "Soft throw pillow with intricate embroidery.",
+        "price": 25.99,
+        "category": "Pillows",
+        "imageUrl": "https://i.ibb.co/8rjWkRC/4.webp"
+    },
+    {
+        
+        "name": "Glass Candle Holders",
+        "description": "Set of 3 glass candle holders in different sizes.",
+        "price": 30.00,
+        "category": "Candles & Holders",
+        "imageUrl": "https://i.ibb.co/4MTWQSv/5.jpg"
+    },
+    {
+        
+        "name": "Wooden Photo Frame",
+        "description": "Elegant wooden photo frame for 4x6 photos.",
+        "price": 15.99,
+        "category": "Photo Frames",
+        "imageUrl": "https://i.ibb.co/fXKt7L4/6.jpg"
+    },
+    {
+        
+        "name": "Indoor Plant Pot",
+        "description": "Ceramic pot for indoor plants with a drainage hole.",
+        "price": 22.50,
+        "category": "Planters",
+        "imageUrl": "https://i.ibb.co/FmgDfjv/7.jpg"
+    },
+    {
+        
+        "name": "Woven Storage Basket",
+        "description": "Hand-woven storage basket made from natural fibers.",
+        "price": 40.00,
+        "category": "Storage",
+        "imageUrl": "https://i.ibb.co/Cnms83D/8.jpg"
+    },
+    {
+        
+        "name": "Decorative Mirror",
+        "description": "Round decorative mirror with an ornate frame.",
+        "price": 85.00,
+        "category": "Mirrors",
+        "imageUrl": "https://i.ibb.co/hx5Q8Mg/9.jpg"
+    },
+    {
+        
+        "name": "Table Lamp",
+        "description": "Modern table lamp with a fabric shade.",
+        "price": 55.99,
+        "category": "Lighting",
+        "imageUrl": "https://i.ibb.co/7KKyxdB/10.jpg"
+    },
+    {
+        
+        "name": "Wall Shelf",
+        "description": "Floating wall shelf made from solid wood.",
+        "price": 65.00,
+        "category": "Shelves",
+        "imageUrl": "https://i.ibb.co/J3VrcDy/11.jpg"
+    },
+    {
+        
+        "name": "Area Rug",
+        "description": "Soft area rug with a geometric pattern.",
+        "price": 150.00,
+        "category": "Rugs",
+        "imageUrl": "https://i.ibb.co/px9v1rz/12.jpg"
+    },
+    {
+        
+        "name": "Decorative Lantern",
+        "description": "Metal lantern with a rustic finish for candles.",
+        "price": 40.99,
+        "category": "Lanterns",
+        "imageUrl": "https://i.ibb.co/YbKFQkR/13.jpg"
+    },
+    {
+        
+        "name": "Scented Candles",
+        "description": "Set of 4 scented candles in decorative jars.",
+        "price": 25.00,
+        "category": "Candles",
+        "imageUrl": "https://i.ibb.co/R38qcJ8/14.jpg"
+    },
+    {
+        
+        "name": "Decorative Tray",
+        "description": "Metal tray with a mirrored base and decorative edges.",
+        "price": 35.00,
+        "category": "Trays",
+        "imageUrl": "https://i.ibb.co/MCfqSss/15.jpg"
+    },
+    {
+        
+        "name": "Wall Art Set",
+        "description": "Set of 3 botanical prints for wall decor.",
+        "price": 90.00,
+        "category": "Wall Art",
+        "imageUrl": "https://i.ibb.co/5nb7Tf2/16.jpg"
+    },
+    {
+        
+        "name": "Decorative Bowl",
+        "description": "Hand-painted decorative bowl for centerpieces.",
+        "price": 50.00,
+        "category": "Bowls",
+        "imageUrl": "https://i.ibb.co/nDVfWKh/17.jpg"
+    },
+    {
+        
+        "name": "Throw Blanket",
+        "description": "Cozy throw blanket with a fringed edge.",
+        "price": 45.00,
+        "category": "Blankets",
+        "imageUrl": "https://i.ibb.co/HD7RPFV/18.jpg"
+    },
+    {
+        
+        "name": "Wall Sconce",
+        "description": "Wall sconce light fixture with an industrial design.",
+        "price": 60.00,
+        "category": "Lighting",
+        "imageUrl": "https://i.ibb.co/5vzTSB4/19.jpg"
+    },
+    {
+        
+        "name": "Decorative Bookends",
+        "description": "Pair of decorative bookends made from marble.",
+        "price": 70.00,
+        "category": "Bookends",
+        "imageUrl": "https://i.ibb.co/sqxYVYZ/20.jpg"
+    },
+    {
+        
+        "name": "Wall Tapestry",
+        "description": "Bohemian style wall tapestry with intricate designs.",
+        "price": 55.00,
+        "category": "Wall Decor",
+        "imageUrl": "https://i.ibb.co/6Hsv9b5/21.jpg"
+    },
+    {
+        
+        "name": "Hanging Planter",
+        "description": "Macrame hanging planter for indoor plants.",
+        "price": 30.00,
+        "category": "Planters",
+        "imageUrl": "https://i.ibb.co/YydqNrt/22.jpg"
+    },
+    {
+        
+        "name": "Decorative Clock",
+        "description": "Modern decorative clock with a minimalist design.",
+        "price": 65.00,
+        "category": "Clocks",
+        "imageUrl": "https://i.ibb.co/mvyjdDt/23.jpg"
+    },
+    {
+        
+        "name": "Picture Frame Set",
+        "description": "Set of 5 picture frames in various sizes.",
+        "price": 45.00,
+        "category": "Photo Frames",
+        "imageUrl": "https://i.ibb.co/51Jjccw/24.jpg"
+    },
+    {
+        
+        "name": "Decorative Bowl Set",
+        "description": "Set of 3 decorative bowls with a marble finish.",
+        "price": 75.00,
+        "category": "Bowls",
+        "imageUrl": "https://i.ibb.co/rmPpHm3/25.jpg"
+    }
+]
