@@ -9,3 +9,8 @@ I just select a good color and decide it to use as a website primary color. Then
 
 Additional Feature: 
 I implement user authentication system . i create sign in and sign up page .
+
+
+Setup Project: 
+ 1. Go to folder path on cmd. then command npm run dev (Client site)
+ 2. Go to Primary folder and command nodemon src/server.js (Server Site)
