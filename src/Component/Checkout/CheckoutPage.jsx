@@ -41,7 +41,7 @@ const CheckoutPage = () => {
     
 
     useEffect(() =>{
-      axios.get(`https://project-orpin-iota.vercel.app/cartData/${email}`)
+      axios.get(`https://project-orpin-iota.vercel.app/cartData`)
       .then(res => setProduct(res.data))
       .catch(error => console.error(error))
   },[product, email])
@@ -245,9 +245,9 @@ if(product){
         </label>
       </div>
             <div className="px-2 flex justify-center items-center">
-                <label for="type2" className="flex items-center cursor-pointer"/>
+                <label htmlFor="type2" className="flex items-center cursor-pointer"/>
                     <input type="radio" name="paypal" ref={paypalref} value='paypal'
-                    id="paypal" className="form-radio h-5 w-5 text-indigo-500" name="type" id="type2"/>
+                    id="paypal" className="form-radio h-5 w-5 text-indigo-500"/>
                     <img src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png" className="h-8 ml-3"/>
               
             </div>
