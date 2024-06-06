@@ -75,7 +75,7 @@ const handleSingleProductDelete = (data) =>{
             {
               Links.map((nav) => (
                 <Link key={nav.id} to={nav.link}>
-                <li className="md:ml-8 cursor-pointer text-sm md:text-[96%] xl:text-base 2xl:text-xl md:my-0 my-7" >
+                <li className="mr-5 md:ml-8 cursor-pointer text-sm md:text-[96%] xl:text-base 2xl:text-xl md:my-0 my-7" >
                   {nav.name}
                 </li>
                 </Link>
