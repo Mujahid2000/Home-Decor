@@ -303,7 +303,7 @@ if(product){
         <div className="px-8 border-b">
           <div className="flex justify-between py-4 text-gray-600">
             <span>Subtotal</span>
-            <span className="font-semibold text-pink-500">${totalPrice}</span>
+            <span className="font-semibold text-pink-500">${totalPrice?.toFixed(2)}</span>
           </div>
           <div className="flex justify-between py-4 text-gray-600">
             <span>Shipping</span>
@@ -312,7 +312,7 @@ if(product){
         </div>
         <div className="font-semibold text-xl px-8 flex justify-between py-8 text-gray-600">
           <span>Total</span>
-          <span>${totalPrice}</span>
+          <span>${totalPrice?.toFixed(2)}</span>
         </div>
       <Toaster
         position="bottom-right"

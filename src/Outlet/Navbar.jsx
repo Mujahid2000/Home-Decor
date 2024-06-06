@@ -176,7 +176,7 @@ const handleSingleProductDelete = (data) =>{
               
               <div className="flex justify-between font-bold">
                 <span>Total</span>
-                <span>${totalPrice}</span>
+                <span>${totalPrice?.toFixed(2)}</span>
               </div>
             </div>
 
