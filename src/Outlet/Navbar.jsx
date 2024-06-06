@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   useEffect(() =>{
-    axios.get('http://localhost:5000/cartData')
+    axios.get('https://project-orpin-iota.vercel.app/cartData')
     .then(res => setProduct(res.data))
     .catch(error => console.error(error))
 },[product])

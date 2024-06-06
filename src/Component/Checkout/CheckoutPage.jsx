@@ -6,7 +6,8 @@ import { AuthContext } from "../Config/AuthContext";
 const CheckoutPage = () => {
   const [product, setProduct] = useState([]);
   const { user } = useContext(AuthContext);
-  const userEmail = user?.email
+  const email = user?.email;
+  const userEmail = user?.email;
   const formRef = useRef();
   const dualCurrencyRef = useRef();
   const paypalref = useRef();
@@ -40,10 +41,10 @@ const CheckoutPage = () => {
     
 
     useEffect(() =>{
-      axios.get('https://project-orpin-iota.vercel.app/cartData')
+      axios.get(`https://project-orpin-iota.vercel.app/cartData/${email}`)
       .then(res => setProduct(res.data))
       .catch(error => console.error(error))
-  },[product])
+  },[product, email])
 
   let totalPrice = 0;
 
