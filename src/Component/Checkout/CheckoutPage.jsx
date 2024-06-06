@@ -1,15 +1,46 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { Toaster, toast } from "sonner";
+import { AuthContext } from "../Config/AuthContext";
 
 const CheckoutPage = () => {
   const [product, setProduct] = useState([]);
+  const { user } = useContext(AuthContext);
+  const userEmail = user?.email
+  const formRef = useRef();
+  const dualCurrencyRef = useRef();
+  const paypalref = useRef();
+
+
 // console.log(product);
     const handleCheckout = (e) =>{
-        e.preventDefault()
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const first_name = form.get('first-name');
+        const last_name = form.get('last-name');
+        const phone = form.get('phone');
+        const email = form.get('email');
+        const address = form.get('address');
+        const date = form.get('date');
+        const time = form.get('time');
+        const area = form.get('area');
+        const city = form.get('city');
+        const state = form.get('state');
+        const post_code = form.get('post-code');
+        const dualCurrencyValue = dualCurrencyRef.current.checked ? dualCurrencyRef.current.value : null;
+        const paypal = paypalref.current.checked ? paypalref.current.value : null;
+        const deliverInfo = {first_name, last_name, phone,email,address,date,time, area,city, state,post_code , dualCurrencyValue, paypal};
+
+
+        axios.post('https://project-orpin-iota.vercel.app/deliveryinfo', {deliverInfo, product , userEmail})
+        .then((response) => console.log(response));
+        toast.success("Order Success")
     }
 
+    
+
     useEffect(() =>{
-      axios.get('http://localhost:5000/cartData')
+      axios.get('https://project-orpin-iota.vercel.app/cartData')
       .then(res => setProduct(res.data))
       .catch(error => console.error(error))
   },[product])
@@ -28,7 +59,7 @@ if(product){
     <div className="mt-[5rem] flex flex-col md:flex-col md:items-center lg:flex-col lg:items-center xl:items-start xl:flex-row 2xl:flex-row md:justify-center lg:justify-center xl:justify-evenly 2xl:justify-evenly">
      <div className="flex items-center justify-center p-8">
       <div className="mx-auto w-full max-w-[550px] bg-white">
-        <form onSubmit={handleCheckout}>
+        <form ref={formRef} onSubmit={handleCheckout}>
           <label className="mb-5 block text-base font-semibold text-[#07074D] sm:text-xl">
             Personal Information
           </label>
@@ -199,15 +230,23 @@ if(product){
             </div>
           </div>
           <div className="mb-3 flex ">
-            <div className="px-2">
-                <label for="type1" className="flex items-center cursor-pointer">
-                    <input type="radio" className="form-radio h-5 w-5 text-indigo-500" name="type" id="type1" checked/>
-                    <img src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png" className="h-8 ml-3"/>
-                </label>
-            </div>
+          <div className="px-2">
+        <label htmlFor="type1" className="flex items-center cursor-pointer">
+          <input
+            type="radio"
+            name="type"
+            value="DualCurrency"
+            id="type1"
+            ref={dualCurrencyRef}
+            className="form-radio h-5 w-5 text-indigo-500"
+          />
+          <img src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png" className="h-8 ml-3" alt="Dual Currency"/>
+        </label>
+      </div>
             <div className="px-2 flex justify-center items-center">
                 <label for="type2" className="flex items-center cursor-pointer"/>
-                    <input type="radio" className="form-radio h-5 w-5 text-indigo-500" name="type" id="type2"/>
+                    <input type="radio" name="paypal" ref={paypalref} value='paypal'
+                    id="paypal" className="form-radio h-5 w-5 text-indigo-500" name="type" id="type2"/>
                     <img src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png" className="h-8 ml-3"/>
               
             </div>
@@ -263,7 +302,7 @@ if(product){
         <div className="px-8 border-b">
           <div className="flex justify-between py-4 text-gray-600">
             <span>Subtotal</span>
-            <span className="font-semibold text-pink-500">$846.98</span>
+            <span className="font-semibold text-pink-500">${totalPrice}</span>
           </div>
           <div className="flex justify-between py-4 text-gray-600">
             <span>Shipping</span>
@@ -274,6 +313,14 @@ if(product){
           <span>Total</span>
           <span>${totalPrice}</span>
         </div>
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          classNames: {
+            success: "text-green-400",
+          },
+        }}
+      />
       </div>
     </div>
   );

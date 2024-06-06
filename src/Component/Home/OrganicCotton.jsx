@@ -3,7 +3,7 @@
 const OrganicCotton = () => {
     return (
       <div className="flex justify-evenly flex-col lg:flex-row mt-9 px-3 gap-3 mx-auto items-center">
-        <div className="max-w-[500px] max-h-[400px] bg-[#F3F5F6] rounded-2xl">
+        <div className="max-w-[600px] max-h-[450px] bg-[#F3F5F6] rounded-2xl">
         <div className="p-8 flex-1">
                     <h2 className="text-4xl font-bold text-pink-500">Organic Cotton and Bamboo</h2>
                     <p className="mt-4 text-lg text-gray-600">
@@ -17,7 +17,7 @@ const OrganicCotton = () => {
                 </div>
         </div>
         <div>
-          <img className="rounded-2xl max-w[600px] max-h-[500px]" src="https://i.ibb.co/KW9zqy6/image-17.png" alt="" />
+          <img className="rounded-2xl max-w[650px] max-h-[550px]" src="https://i.ibb.co/KW9zqy6/image-17.png" alt="" />
         </div>
       </div>
     );

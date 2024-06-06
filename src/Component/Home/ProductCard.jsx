@@ -1,25 +1,28 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { FaCartPlus } from "react-icons/fa";
+import { useContext, useEffect, useState } from "react";
+import {   FaCartPlus  } from "react-icons/fa";
 import { Toaster, toast } from "sonner";
+import { AuthContext } from "../Config/AuthContext";
 
 const ProductCard = () => {
   const [productData, setProductData] = useState([]);
-
+  const { user } = useContext(AuthContext);
+  const email = user?.email
   useEffect(() => {
-    axios.get('http://localhost:5000/products')
+    axios.get('https://project-orpin-iota.vercel.app/products')
       .then(res => setProductData(res.data))
       .catch(error => console.error(error));
   }, []);
 
   const handleAddtoCart= (data) =>{
-    axios.post('http://localhost:5000/addCart', data)
+    axios.post('https://project-orpin-iota.vercel.app/addCart', {data, email})
     .then((response) => console.log(response));
     toast.success("Item added to cart!")
   }
 
   return (
-   <div className=" mx-auto">
+   <div className=" mx-auto mt-5">
+    
      <div className="flex flex-wrap justify-center">
       {productData.map(product => (
         <div key={product._id} className="max-w-xs rounded overflow-hidden shadow-lg m-4">
