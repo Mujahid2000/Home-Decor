@@ -9,13 +9,13 @@ const Footer = () => {
           <div className="flex flex-wrap justify-between">
             <div className="w-full lg:w-1/3 mb-6 lg:mb-0">
               <img
-                src="https://i.ibb.co/9Wmvqhy/logo-home.png"
+                src="https://i.ibb.co/7tcxRQb/logo-removebg-preview.png"
                 alt=""
                 className="w-16 pb-6"
               />
               <p className="text-gray-600 mt-2 w-[350px]">
                 Latin literature from 45 BC, making it over 2000 years old.
-                Richard McClintock, a Latin professor at <br /> Hampden.
+                Richard McClintock, a Latin professor at  Hampden.
               </p>
               <div className="flex mt-4 gap-3">
                 <div className="bg-white rounded-full p-2 border-2 border-pink-200">

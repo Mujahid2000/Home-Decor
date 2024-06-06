@@ -289,7 +289,7 @@ if(product){
             </div>
             <div className="col-span-2 pt-3">
               <div className="flex items-center space-x-2 text-sm justify-between">
-                <span className="text-gray-400"> ${myData.data.price}</span>
+                <span className="text-gray-400">1 × ${myData.data.price}</span>
                 <span className="text-pink-400 font-semibold inline-block">
                   ${ myData.data.price}
                 </span>
