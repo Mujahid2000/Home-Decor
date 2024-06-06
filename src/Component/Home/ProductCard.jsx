@@ -15,9 +15,14 @@ const ProductCard = () => {
   }, []);
 
   const handleAddtoCart= (data) =>{
-    axios.post('https://project-orpin-iota.vercel.app/addCart', {data, email})
-    .then((response) => console.log(response));
-    toast.success("Item added to cart!")
+    if(email){
+      axios.post('https://project-orpin-iota.vercel.app/addCart', {data, email})
+      .then((response) => console.log(response));
+      toast.success("Item added to cart!")
+
+    }else{
+      alert('Please Login')
+    }
   }
 
   return (

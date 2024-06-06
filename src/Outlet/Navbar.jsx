@@ -1,12 +1,11 @@
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
-import { FaTrash, FaUser } from 'react-icons/fa';
+import { FaTrash } from 'react-icons/fa';
 import { HiShoppingCart } from 'react-icons/hi';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Component/Config/AuthContext';
 import { AiOutlineLogout } from 'react-icons/ai';
-import { MdDashboard } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
 
 const Navbar = () => {
@@ -38,7 +37,7 @@ let totalPrice = 0;
 // console.log(totalPrice);
 if(product){
   product.forEach(item =>{
-    totalPrice +=  item?.price
+    totalPrice +=  item?.data?.price
 
   })
 }
@@ -90,7 +89,7 @@ const handleSingleProductDelete = (data) =>{
           <button className='w-8 h-8'>
             <HiShoppingCart className="h-8 w-8 text-black" />
           </button>
-          <span className="absolute -top-2 left-4 rounded-full bg-pink-500 p-0.5 px-2 text-sm text-red-50">{product.length}</span>
+          <span className="absolute -top-2 left-4 rounded-full bg-pink-500 p-0.5 px-2 text-sm text-red-50">{product?.length}</span>
         </div>
         {menu && <div className="fixed inset-0" onClick={() => setMenu(false)}></div>}
       </div>
@@ -159,10 +158,10 @@ const handleSingleProductDelete = (data) =>{
           {
   product.map(myData => (
     <div className="flex items-center gap-3" key={myData._id}>
-      <img className="h-12 w-12 rounded-lg" src={myData.imageUrl} alt={myData.name} />
+      <img className="h-12 w-12 rounded-lg" src={myData?.data?.imageUrl} alt={myData?.data?.name} />
       <div>
-        <h3 className="text-base font-medium">{myData.name}</h3>
-        <p className="text-gray-500">${myData.price}</p>
+        <h3 className="text-base font-medium">{myData?.data?.name}</h3>
+        <p className="text-gray-500">${myData?.data?.price}</p>
       </div>
       <button onClick={()=> handleSingleProductDelete(myData)} className="ml-auto">
         <FaTrash />

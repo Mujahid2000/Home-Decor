@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { AuthContext } from "../Config/AuthContext";
 
 const Profile = () => {
-  const { user, loading } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   return (
     <div>
@@ -11,7 +11,7 @@ const Profile = () => {
           <div className="md:grid grid-cols-4 grid-rows-2  bg-white gap-2 p-4 rounded-xl">
             <div className="md:col-span-1 h-48 shadow-xl ">
               <div className="flex w-full h-full relative">
-                <img src={user.photoURL} className="w-44 h-44 m-auto" alt="" />
+                <img src={user?.photoURL} className="w-44 h-44 m-auto" alt="" />
               </div>
             </div>
             <div className="md:col-span-3 h-48 shadow-xl p-4 space-y-2 p-3">
@@ -22,8 +22,8 @@ const Profile = () => {
                 <input
                   className="px-4 border-l-0 cursor-default border-gray-300 focus:outline-none  rounded-md rounded-l-none shadow-sm -ml-1 w-4/6"
                   type="text"
-                  value={user.displayName}
-                  readonly
+                  value={user?.displayName}
+                  
                 />
               </div>
               <div className="flex ">
@@ -33,8 +33,8 @@ const Profile = () => {
                 <input
                   className="px-4 border-l-0 cursor-default border-gray-300 focus:outline-none  rounded-md rounded-l-none shadow-sm -ml-1 w-4/6"
                   type="text"
-                  value={user.email}
-                  readonly
+                  value={user?.email}
+                  
                 />
               </div>
               <div className="flex ">
@@ -45,7 +45,7 @@ const Profile = () => {
                   className="px-4 border-l-0 cursor-default border-gray-300 focus:outline-none  rounded-md rounded-l-none shadow-sm -ml-1 w-4/6"
                   type="text"
                   value="User"
-                  readonly
+                  
                 />
               </div>
             </div>
