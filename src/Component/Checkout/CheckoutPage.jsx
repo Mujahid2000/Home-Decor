@@ -283,9 +283,7 @@ if(product){
               <span className="text-gray-600 text-md font-semi-bold">
                 {myData.data.name}
               </span>
-              <span className="text-gray-400 text-sm inline-block pt-2">
-                Red Headphone
-              </span>
+              
             </div>
             <div className="col-span-2 pt-3">
               <div className="flex items-center space-x-2 text-sm justify-between">
