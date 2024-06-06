@@ -15,7 +15,7 @@ const ProductCard = () => {
   }, []);
 
   const handleAddtoCart= (data) =>{
-    axios.post('https://project-orpin-iota.vercel.app/addCart', {data, email})
+    axios.post('https://project-orpin-iota.vercel.app/cartData', {data, email})
     .then((response) => console.log(response));
     toast.success("Item added to cart!")
   }
