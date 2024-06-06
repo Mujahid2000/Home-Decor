@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div className="mt-[4.8rem]">
+        <div className="mt-[4.4rem]">
              <div className="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
         <div className="container mx-auto px-6 flex relative py-16">
             <div className="sm:w-2/3 lg:w-2/5 flex flex-col -mt-20 md:mt-0 relative z-20">

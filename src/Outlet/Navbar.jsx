@@ -61,7 +61,7 @@ const handleSingleProductDelete = (data) =>{
   return (
     <div className='relative'>
       <div className="shadow-md border w-full fixed top-0 left-0 z-50">
-        <div className="flex justify-between items-center bg-white py-3 md:px-5 px-7">
+        <div className="flex justify-between items-center bg-white  py-2 md:px-5 px-7">
           <div className="font-bold text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800">
             <Link to="/" className="text-gray-800">
               <img src="https://i.ibb.co/7tcxRQb/logo-removebg-preview.png" alt="" className='w-5 md:w-8 lg:w-14 xl:w-10 2xl:w-12' />
